@@ -1,0 +1,42 @@
+{
+  "name": "سورس سبارك لانشاء جلسات",
+  "description": "بوت توليد جلسات تليثون او بايروجرام",
+  "logo": "https://telegra.ph/file/9f31b3a61c4897b297a33.jpg",
+  "keywords": [
+    "telegram",
+    "bot",
+    "python",
+    "pyrogram"
+  ],
+    "env": {
+        "BOT_TOKEN": {
+            "description": "حـط توكن بوت جيبه منا @BotFather",
+            "required": true
+        },  
+        "MUST_JOIN": {
+            "description": "حـط يوزر قناتك بدون [ @ ]",
+            "required": true      
+        }, 
+        "MONGO_URL": {
+            "description": "حـط كود المونجو",
+            "required": true
+        },
+        "API_ID": {
+            "description": "حـط الايبي ايدي",
+            "required": true
+        },
+        "OWNER_ID": {
+            "description": "حــط ايدي مطور البوت.",
+            "required": true
+        }, 
+        "API_HASH": {
+            "description": "حــط الايبي هاش",
+            "required": true
+        }
+    },
+    "addons": [
+        {
+            "plan": "heroku-postgresql"
+        }
+    ]
+}
