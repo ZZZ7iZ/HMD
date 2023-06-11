@@ -34,7 +34,7 @@ import config
 
 
 
-ask_ques = "**» • ذا كنـت تـريد تنـصيـب سـورس مـيوزك فـأختـار بـايـروجـرام\n• واذا تـريـد تنـصـيب التليثون فـأخـتار تيرمكـس\n• اذا كنـت سـورسـك مـتحـدث مـع اخـر تحديثات الـباروجـرام فا اخـتار بـايـروجـرام [New] \n• يوحد استخرجات جـلسـات لـي البـوتات :**"
+ask_ques = "**اضغط لبدا استخراج جلسة**"
 buttons_ques = [
     [
         InlineKeyboardButton("‹ بايروجرام ›", callback_data="pyrogram1"),
@@ -51,7 +51,7 @@ buttons_ques = [
 
 gen_button = [
     [
-        InlineKeyboardButton(text=" ⍆ اضغط لبدا استخراج كود ⍅", callback_data="generate")
+        InlineKeyboardButton(text="  اضغط لبدا استخراج كود ", callback_data="generate")
     ]
 ]
 
@@ -65,9 +65,9 @@ async def main(_, msg):
 
 async def generate_session(bot: Client, msg: Message, telethon=False, old_pyro: bool = False, is_bot: bool = False):
     if telethon:
-        ty = "ᴛᴇʟᴇᴛʜᴏɴ"
+        ty = "تيرمكس"
     else:
-        ty = "ᴩʏʀᴏɢʀᴀᴍ"
+        ty = "بايروجرام"
         if not old_pyro:
             ty += " ᴠ2"
     if is_bot:
@@ -86,7 +86,7 @@ async def generate_session(bot: Client, msg: Message, telethon=False, old_pyro: 
         except ValueError:
             await api_id_msg.reply("**قم بإرسال API_HASH**", quote=True, reply_markup=InlineKeyboardMarkup(gen_button))
             return
-        api_hash_msg = await bot.ask(user_id, "ارسل معرف ᴀᴩɪ_ʜᴀsʜ من فضلك", filters=filters.text)
+        api_hash_msg = await bot.ask(user_id, "**قم بإرسال API_HASH**", filters=filters.text)
         if await cancelled(api_hash_msg):
             return
         api_hash = api_hash_msg.text
