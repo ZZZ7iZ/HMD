@@ -15,22 +15,27 @@
         },  
         "MUST_JOIN": {
             "description": "حـط يوزر قناتك بدون [ @ ]",
+          "value": "ZZZ7iZ",
             "required": true      
         }, 
         "MONGO_URL": {
             "description": "حـط كود المونجو",
+          "value": "mongodb+srv://ersh:antwai@cluster0.pforz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
             "required": true
         },
         "API_ID": {
             "description": "حـط الايبي ايدي",
+          "value": "16228908",
             "required": true
         },
         "OWNER_ID": {
             "description": "حــط ايدي مطور البوت.",
+          "value": "5012406813",
             "required": true
         }, 
         "API_HASH": {
             "description": "حــط الايبي هاش",
+          "value": "1e0ebcbec6fb07e5064f54797e0cadb5",
             "required": true
         }
     },
